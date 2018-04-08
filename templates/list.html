@@ -7,7 +7,6 @@
     <body>
      <div id = "header">
          <h2>Find a study buddy for: <b> {{ dept }} {{ num }} </b></h2>  </div>
-          
       <br> <br>
         <center>
       <p id="people" name="people">No buddies for this class yet :( Be the first by signing up below!</p>
@@ -17,9 +16,10 @@
           var contact = {{ emails|tojson }};
           names = " ";
           for (i=0; i<buddies.length; i++) {
-              names += "<b>Name: </b>" + buddies[i] + "  ||  " + "<a href="mailto:sgdas@ucsd.edu">Email</a><br>";
+              names += <b>Name:</b> buddies[i] || ;
+              //<a href="mailto:sgdas@ucsd.edu">Email</a><br>;
               //names += contact[i];
-              names += "<br>";
+              //names += "<br>";
           }
           if (names != " ") {
           document.getElementById("people").innerHTML = names;
