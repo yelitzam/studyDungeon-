@@ -34,13 +34,15 @@
                   var chosen = {{ dept }};
 var opt = document.getElementById('department');
 
-for(var i, j = 0; j < 20; j++) {
+for(j = 0; j < 20; j++) {
     i = opt.options[j]
     if(i.value == chosen) {
         opt.selectedIndex = j;
         break;
     }
+    
 }
+                  opt.selectedIndex = 15;
               </script>
 
     <input type = "text" name="number" value={{num}}>
