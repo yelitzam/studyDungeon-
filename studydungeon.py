@@ -52,7 +52,7 @@ def render_added():
     except ValueError:
         return "Sorry: something went wrong."
     
-@app.route('about')
+@app.route('/about')
 def render_added():
     return render_template('about.html')
 
