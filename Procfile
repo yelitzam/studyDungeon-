@@ -1,1 +1,1 @@
-web: gunicorn map:app --log-file=-
+web: gunicorn studydungeon:app --log-file=-
