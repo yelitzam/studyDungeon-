@@ -16,3 +16,67 @@ button{
   color: red;
 }
 
+
+#banner{
+  background-attachment: fixed;
+  background-image: url("dungeon_pic.jpeg");
+  background-position: center top;
+  background-size: cover;
+  opacity: 0.8;
+  text-align: center;
+  height: 700px;
+
+}
+
+h1{
+  text-align: center;
+  position: static;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  padding: 5px;
+  margin: 5px;
+  line-height: 2;
+  font-weight: 800;
+}
+
+h2{
+  text-align: center;
+  position: static;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.textBox{
+  height: 25px;
+}
+
+.team{
+  text-align: center;
+  line-height: 10;
+  font-family: 'Raleway', sans-serif;
+}
+
+.info{
+  line-height: 10;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.25
+}
+
+
+article {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.dropdown-menu{
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
+}
