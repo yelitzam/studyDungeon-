@@ -23,12 +23,13 @@ mongo = PyMongo(app)
 
 #app.secret_key='w98fw9ef8hwe98fhwef'
 
-#mongo.db.events.insert_one( {"Department": dept, "Class": num,
-                           #  "Name": name, "Email": contact} )
+
 
 @app.route('/')
 def home():
     return render_template('home.html')
+    mongo.db.events.insert_one( {"Department": dept, "Class": num,
+                             "Name": name, "Email": contact} )
 
 
 if __name__=="__main__":
