@@ -7,6 +7,28 @@
     <body>
       <div id = "header">
         <h2>Find your study buddy!</h2><br>
+          
+      <br> <br>
+        <center>
+      <p id="buddies">bud</p>
+        </center>
+      <script>
+        window.onload = function() {
+          var buddies = {{ buds|tojson }};
+          var contact = {{ emails|tojson }};
+          names = " ";
+          for (i=0; i<buddies.length; i++) {
+              names += "<b>Name: </b>";
+              names += buddies[i];
+              names += "  ||  "
+              names += "<b>Can be reached at: </b>";
+              names += contact[i];
+              names += "<br>";
+          }
+          document.getElementById("buddies").innerHTML = names;
+        }
+      </script> 
+          <br><br>
           <form action="/added">
               <select name="department" id="department">
       <option selected="selected" value = "ANTH">ANTH</option>
@@ -55,25 +77,5 @@ for(j = 0; j < 20; j++) {
 
             <button onlick = "MyFunction()">Join this Class!</button></form>
       </div>
-      <br> <br>
-        <center>
-      <p id="buddies">bud</p>
-        </center>
-      <script>
-        window.onload = function() {
-          var buddies = {{ buds|tojson }};
-          var contact = {{ emails|tojson }};
-          names = " ";
-          for (i=0; i<buddies.length; i++) {
-              names += "<b>Name: </b>";
-              names += buddies[i];
-              names += "  ||  "
-              names += "<b>Can be reached at: </b>";
-              names += contact[i];
-              names += "<br>";
-          }
-          document.getElementById("buddies").innerHTML = names;
-        }
-      </script>    
     </body>
 {%  endblock %}
