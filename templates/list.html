@@ -28,9 +28,11 @@
               names += contact[i];
               names += "<br>";
           }
+          
+          document.getElementById("people").innerHTML = names;
           dep = {{ dept }};
           nu = {{ num }};
-          document.getElementById("people").innerHTML = names;
+          
           document.getElementById("class").innerHTML = dep;
           document.getElementById("code").innerHTML = nu; 
         //}
