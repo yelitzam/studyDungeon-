@@ -12,7 +12,8 @@ td {
     align="center";
 }
  th {
-    padding: 20px;
+    padding-right: 15px;
+    padding-bottom: 10px;
      font-size: 25px;
       align="left"
 }
@@ -29,7 +30,7 @@ td {
           var buddies = {{ buds|tojson }};
           var contact = {{ emails|tojson }};
           names = '<table>';
-          names += '<tr><th>Name      </th><th>Contact</th></tr>';
+          names += '<tr><th>Name</th><th>Contact</th></tr>';
           for (i=0; i<buddies.length; i++) {
               names += '<tr>' + "<td>Name: " + buddies[i] + '</td>' + '<td><a href="mailto:' + contact[i] + '">Email this Student</a></td></tr>';
           }
