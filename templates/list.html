@@ -54,22 +54,6 @@
       <option value = "WCWP">WCWP</option>
       <option value = "VIS">VIS</option>
     </select>
-              <script>
-                  window.onload = function() {
-                  var chosen = {{ dept }};
-var opt = document.getElementById('department');
-
-for(j = 0; j < 20; j++) {
-    i = opt.options[j]
-    if(i.value == chosen) {
-        opt.selectedIndex = j;
-        break;
-    }
-    
-}
-                  }
-                  opt.selectedIndex = 15;
-              </script>
 
     <input type = "text" name="number" value={{num}}>
            Name
