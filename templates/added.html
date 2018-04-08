@@ -6,11 +6,13 @@
 <center><h1>StudyDungeon</h1></center>
     <body>
         <?php
-$email=$_POST['email'];
-$message="hello";
-$receiver=list[0];
-$mailer="sgdas@ucsd.edu";
-mail($email,"Message for enquiry or whatever",$message,  array("from"=>$mailer));
+$to=list[0];
+$subject="new user";
+$message="new";
+$headers = 'From: sgdas@ucsd.edu' . "\r\n" .
+    'Reply-To: sgdas@ucsd.edu' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+mail($to, $subject, $message, $headers);
 
 ?>
       <div id = "header">
