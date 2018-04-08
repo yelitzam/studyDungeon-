@@ -31,7 +31,15 @@
       <option value = "VIS"> VIS </option>
     </select>
               <script>
-                  $("#department").val( {{ dept }} );
+                  var option = {{ dept }};
+var opt = document.getElementById('department');
+
+for(var i, j = 0; i = opt.options[j]; j++) {
+    if(i.value == dept) {
+        opt.selectedIndex = j;
+        break;
+    }
+}
               </script>
 
     <input type = "text" name="number" value={{num}}>
