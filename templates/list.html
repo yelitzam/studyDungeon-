@@ -14,13 +14,13 @@
       <script>
           var buddies = {{ buds|tojson }};
           var contact = {{ emails|tojson }};
-          names = " ";
+          names = '<table>';
+          names += '<tr><th>Name</th><th>Email</th></tr>';
           for (i=0; i<buddies.length; i++) {
-              names += "<b>Name: </b>" + buddies[i] + " || " + '<a href="mailto:' + contact[i] + '">Email this Student</a><br>';
-              //names += contact[i];
-              //names += "<br>";
+              names += '<tr>' + "<td>Name: " + buddies[i] + '</td>' + '<td><a href="mailto:' + contact[i] + '">Email this Student</a></td></tr>';
           }
           if (names != " ") {
+              names += '</table>';
           document.getElementById("people").innerHTML = names;
           }
           var dep = "okay" + {{ dept }};
