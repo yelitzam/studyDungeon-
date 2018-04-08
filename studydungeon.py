@@ -28,7 +28,7 @@ def home():
 def render_list():
     try:
         dept = str(request.args['department'])
-        num = int(request.args['number'])
+        num = str(request.args['number'])
         buddies = []
         mail = []
         for buddy in mongo.db.events.find({ "Department": dept, "Class": num }):
@@ -44,7 +44,7 @@ def render_list():
 def render_added():
     try:
         dept = str(request.args['department'])
-        num = int(request.args['number'])
+        num = str(request.args['number'])
         name = str(request.args['name'])
         email = str(request.args['email'])
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
