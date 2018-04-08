@@ -2,11 +2,7 @@
   align-items: center;
   font-family: 'Raleway', sans-serif;
   color: pink;
-  text-shadow:
-  -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
+  
 
 }
 
@@ -43,6 +39,14 @@ a:hover {
   text-align: center;
   height: 700px;
 
+}
+
+outline{
+  text-shadow:
+  -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
 }
 
 h1{
