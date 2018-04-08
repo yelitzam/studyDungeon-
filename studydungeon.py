@@ -10,8 +10,8 @@ app.config['MONGO_URI'] = 'mongodb://studydungeon:goblin@ds237989.mlab.com:37989
 app = Flask(studydungeon)
 mongo = PyMongo(app)
 
-mongo.db.events.insert_one( {"Department": dept, "Class": num,
-                             "Name": name, "Email": contact} )
+#mongo.db.events.insert_one( {"Department": dept, "Class": num,
+                           #  "Name": name, "Email": contact} )
 
 @app.route('/')
 def home():
