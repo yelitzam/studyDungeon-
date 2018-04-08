@@ -27,11 +27,11 @@ def home():
 @app.route('/list')
 def render_list():
     try:
-        #dept = str(request.args['department'])
+        dept = str(request.args['department'])
         num = int(request.args['number'])
-        #name = str(request.args['name'])
-        #email = int(request.args['email'])
-        mongo.db.events.insert_one( {"Department": 1, "Class": 1, "Name": 1, "Email": 1} )
+        name = str(request.args['name'])
+        email = int(request.args['email'])
+        mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
         return render_template('list.html')
     except ValueError:
         return "Sorry: something went wrong."
