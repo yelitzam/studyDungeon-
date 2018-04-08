@@ -9,7 +9,7 @@
         <h2>Pick a class dumbass</h2>
       </div>
     <br> <br>
-    <select>
+    <select id = "department">
       <option value = "ANTH"> ANTH </option>
       <option value = "AWP"> AWP </option>
       <option value = "BENG"> BENG </option>
@@ -32,14 +32,18 @@
       <option value = "VIS"> VIS </option>
     </select>
 
-    <input type = "text" id = "myText" >
+    <input type = "text" id = "number" >
+     Name 
+    <input type = "text" id = "name" >
+     Email
+        <input type = "text" id = "email" >
 
     <button onlick = "MyFunction()">Submit</button>
     <p id="demo">
     </p>
     <script>
     function myFunction(){
-        var x = document.getElementById("myText").value;
+        var x = document.getElementById("number").value;
                 document.getElementById("demo").innerHTML=x;
     }
     </script>
