@@ -47,8 +47,12 @@ def render_added():
         num = int(request.args['number'])
         name = str(request.args['name'])
         email = str(request.args['email'])
+        toMail = []
+        for person in mongo.db.events.find({ "Department": dept, "Class": num }):
+            cont = toMail["Email"]
+            mail.append(cont)
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
-        return render_template('added.html')
+        return render_template('added.html', list = toMail)
     except ValueError:
         return "Sorry: something went wrong."
     
