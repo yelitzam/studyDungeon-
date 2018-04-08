@@ -29,8 +29,12 @@ def render_list():
     try:
         dept = str(request.args['department'])
         num = int(request.args['number'])
-        name = str(request.args['name'])
-        email = str(request.args['email'])
+        if (name != null) {
+          name = str(request.args['name'])
+        }
+        if (email != null) {
+          email = str(request.args['email'])
+        }
         buddies = []
         mail = []
         for buddy in mongo.db.events.find({ "Department": dept, "Class": num }):
