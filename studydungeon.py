@@ -29,12 +29,6 @@ def render_list():
     try:
         dept = str(request.args['department'])
         num = int(request.args['number'])
-        if (name != null) {
-          name = str(request.args['name'])
-        }
-        if (email != null) {
-          email = str(request.args['email'])
-        }
         buddies = []
         mail = []
         for buddy in mongo.db.events.find({ "Department": dept, "Class": num }):
@@ -42,8 +36,17 @@ def render_list():
             buddies.append(person)
             cont = buddy["Email"]
             mail.append(cont)
-        mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
         return render_template('list.html', buds = buddies, emails = mail)
+    except ValueError:
+        return "Sorry: something went wrong."
+    
+@app.route('/added')
+def render_added():
+    try:
+        name = str(request.args['name'])
+        email = str(request.args['email'])
+        mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
+        return render_template('added.html')
     except ValueError:
         return "Sorry: something went wrong."
 
