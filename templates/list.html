@@ -12,10 +12,14 @@
         <!--{{buds}} -->
       <p id="buddies">bud</p>
       <script>
-        
         window.onload = function() {
-          var counts = {{ buds|tojson }};
-          document.getElementById("buddies").innerHTML = counts[0];
+          var buddies = {{ buds|tojson }};
+          names = "";
+          for bud in buddies {
+              names.concat(bud);
+              names.concat('\n');
+          }
+          document.getElementById("buddies").innerHTML = names;
         }
       </script>    
     </body>
