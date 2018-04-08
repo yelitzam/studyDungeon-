@@ -30,6 +30,7 @@ def render_list():
     #name = str(request.args['name'])
     #email = int(request.args['email'])
     mongo.db.events.insert_one( {"Department": 1, "Class": 1, "Name": 1, "Email": 1} )
+    return render_template('list.html')
     
 
 
