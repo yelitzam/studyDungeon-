@@ -15,10 +15,3 @@ button{
   text-align: center;
   color: red;
 }
-
-#background{
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  background-repeat: repeat-x;
-}
