@@ -12,7 +12,9 @@
         <!--{{buds}} -->
       <p name="buddies"></p>
       <script>
-        document.getElementById("buddies").innerHTML = 10;
+        window.onload = function() {
+          document.getElementById("buddies").innerHTML = 10;
+        }
       </script>    
     </body>
 {%  endblock %}
