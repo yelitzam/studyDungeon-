@@ -19,6 +19,10 @@ a:link {
   color: pink;
 }
 
+a:visited {
+  color: pink;
+}
+
 a:hover {
   color: blue;
 }
