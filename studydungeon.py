@@ -51,6 +51,10 @@ def render_added():
         return render_template('added.html')
     except ValueError:
         return "Sorry: something went wrong."
+    
+@app.route('about')
+def render_added():
+    return render_template('about.html')
 
 if __name__=="__main__":
     app.run(debug=False, port=5000)
