@@ -5,6 +5,8 @@ from flask import session
 from flask_pymongo import PyMongo
 from github import Github
 
+import os
+
 app = Flask(__name__)
 app.debug = False
 app.secret_key = os.environ['APP_SECRET_KEY']
