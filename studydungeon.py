@@ -36,7 +36,7 @@ def render_list():
             buddies.append(person)
             cont = buddy["Email"]
             mail.append(cont)
-        return render_template('list.html', buds = buddies, emails = mail)
+        return render_template('list.html', buds = buddies, emails = mail, dept = dept, num = num)
     except ValueError:
         return "Sorry: something went wrong."
     
