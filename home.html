@@ -28,4 +28,15 @@
       <option value = "VIS"> VIS </option>
     </select>
 
+    <input type = "text" id = "myText" >
+
+    <button onlick = "MyFunction()">Submit</button>
+    <p id="demo">
+    </p>
+    <script>
+    function myFunction(){
+        var x = document.getElementById("myText").value;
+                document.getElementById("demo").innerHTML=x;
+    }
+    </script>
 {%  endblock %}
