@@ -3,10 +3,10 @@
 {%  block title %}Home{%  endblock %}
 
 {%  block content %}
-    <h1>StudyDungeon</h1>
+<center><h1>StudyDungeon</h1></center><br><br>
     <body>
       <div id = "header">
-        <h2>Find your study buddy!</h2><br>
+          <h2>Find a study buddy for </h2><p id="class"></p><p id="code</p>"><br>
           
       <br> <br>
         <center>
@@ -26,6 +26,8 @@
               names += "<br>";
           }
           document.getElementById("buddies").innerHTML = names;
+          document.getElementById("class").innerHTML = {{dept}};
+          document.getElementById("code").innerHTML = {{num}};
         }
       </script> 
           <br><br>
