@@ -9,10 +9,11 @@
         <h2>Find your study buddy!</h2>
       </div>
     <br> <br>
+        <p id="buddies"></p>
         <script>
         for (var bud in buds) 
 {
-   console.log(bud);
+    document.getElementById("buddies").innerHTML += bud;
 }
         </script>
      
