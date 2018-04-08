@@ -19,11 +19,11 @@ button{
   color: red;
 }
 a:link {
-  color: pink;
+  color: #ef8a53;
 }
 
 a:visited {
-  color: pink;
+  color: #ef8a53;
 }
 
 a:hover {
