@@ -34,7 +34,7 @@ td {
           for (i=0; i<buddies.length; i++) {
               names += '<tr>' + "<td><b>Name: </b>" + buddies[i] + '</td>' + '<td><a href="mailto:' + contact[i] + '">Email this Student</a></td></tr>';
           }
-          if (names != " ") {
+          if (buddies.length > 0) {
               names += '</table>';
           document.getElementById("people").innerHTML = names;
           }
