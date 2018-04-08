@@ -49,7 +49,7 @@ def render_added():
         email = str(request.args['email'])
         toMail = []
         for person in mongo.db.events.find({ "Department": dept, "Class": num }):
-            cont = toMail["Email"]
+            cont = person["Email"]
             mail.append(cont)
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
         return render_template('added.html', list = toMail)
