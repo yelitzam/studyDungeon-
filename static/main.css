@@ -15,6 +15,13 @@ button{
   text-align: center;
   color: red;
 }
+a:link {
+  color: pink;
+}
+
+a:hover {
+  color: blue;
+}
 
 
 #banner{
