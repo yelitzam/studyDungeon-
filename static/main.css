@@ -64,6 +64,23 @@ h1{
     5px -5px 0 #000,
     -5px 5px 0 #000,
     5px 5px 0 #000;
+  color: black;
+}
+
+h2{
+  text-align: center;
+  position: static;
+  font-family: 'Verdana', sans-serif;
+  font-size: 30px;
+  padding: 3px;
+  margin: 3px;
+  line-height: 2;
+  font-weight: bold;
+  -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;
+  color: black;
 }
 
 h1a{
@@ -92,18 +109,7 @@ select{
   background-color:pink;
 }
 
-h2{
-  text-align: center;
-  position: static;
-  font-family: 'Verdana', sans-serif;
-  font-size: 30px;
-  line-height: 2;
-  font-weight: 400;
-  -3px -3px 0 #000,
-    3px -3px 0 #000,
-    -3px 3px 0 #000,
-    3px 3px 0 #000;
-}
+
 
 .textBox{
   height: 25px;
