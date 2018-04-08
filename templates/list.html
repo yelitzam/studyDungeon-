@@ -14,7 +14,7 @@
       <option value = "BENG">BENG</option>
       <option value = "BICD">BICD</option>
       <option value = "BIBC">BIBC</option>
-      <option value = "CENG" selected>CENG</option>
+      <option value = "CENG">CENG</option>
       <option value = "CHEM">CHEM</option>
       <option value = "COGS">COGS</option>
       <option value = "CSE">CSE</option>
@@ -34,7 +34,8 @@
                   var chosen = {{ dept }};
 var opt = document.getElementById('department');
 
-for(var i, j = 0; i = opt.options[j]; j++) {
+for(var i, j = 0; j < 20; j++) {
+    i = opt.options[j]
     if(i.value == chosen) {
         opt.selectedIndex = j;
         break;
@@ -44,7 +45,7 @@ for(var i, j = 0; i = opt.options[j]; j++) {
 
     <input type = "text" name="number" value={{num}}>
            Name
-    <input type = "text" name="name" value={{dept}}>
+    <input type = "text" name="name">
      Email
         <input type = "text" name="email" >
 
