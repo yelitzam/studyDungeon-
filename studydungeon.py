@@ -30,7 +30,7 @@ def render_list():
         dept = str(request.args['department'])
         num = int(request.args['number'])
         name = str(request.args['name'])
-        email = int(request.args['email'])
+        email = str(request.args['email'])
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
         return render_template('list.html')
     except ValueError:
