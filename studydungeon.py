@@ -21,12 +21,13 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def home():
+
     return render_template('home.html')
 
 @app.route('/list')
 def render_list():
     #dept = str(request.args['department'])
-    #num = str(request.args['number'])
+    num = str(request.args['number'])
     #name = str(request.args['name'])
     #email = int(request.args['email'])
     mongo.db.events.insert_one( {"Department": 1, "Class": 1, "Name": 1, "Email": 1} )
