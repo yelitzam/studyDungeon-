@@ -35,8 +35,6 @@ def render_list():
         return render_template('list.html')
     except ValueError:
 	return "Sorry: something went wrong."
-    
-
 
 if __name__=="__main__":
     app.run(debug=False, port=5000)
