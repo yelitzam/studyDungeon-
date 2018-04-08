@@ -63,6 +63,7 @@ h1{
     5px -5px 0 #000,
     -5px 5px 0 #000,
 5px 5px 0 #000;
+  color: pink;
 }
 
 h2{
@@ -78,6 +79,7 @@ h2{
     3px -3px 0 #000,
     -3px 3px 0 #000,
     3px 3px 0 #000;
+  color: pink;
 
 }
 
