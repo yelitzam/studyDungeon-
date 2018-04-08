@@ -12,3 +12,7 @@ mongo = PyMongo(app)
 
 mongo.db.events.insert_one( {"Department": dept, "Class": num,
                              "Name": name, "Email": contact} )
+
+@app.route('/')
+def home():
+    return render_template('home.html')
