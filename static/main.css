@@ -1,0 +1,20 @@
+#content{
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  color: pink;
+
+}
+
+button{
+  width:120px;
+  color: black;
+}
+h1{
+  color: red;
+}
+
+#header{
+  align-items: center;
+  text-align: center;
+  color: red;
+}
