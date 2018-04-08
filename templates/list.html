@@ -11,10 +11,10 @@
           
       <br> <br>
         <center>
-      <div id="buddies">No buddies for this class yet :(</div>
+      <div id="people">No buddies for this class yet :(</div>
         </center>
       <script>
-        window.onload = function() {
+       // window.onload = function() {
           var buddies = {{ buds|tojson }};
           var contact = {{ emails|tojson }};
           names = " ";
@@ -27,10 +27,10 @@
               names += "<br>";
           }
           names += awefoihdflkjnadf;
-          document.getElementById("buddies").innerHTML = 5;
+          document.getElementById("people").innerHTML = 5;
           #document.getElementById("class").innerHTML = {{ dept }};
          # document.getElementById("code").innerHTML = {{ num }}; 
-        }
+        //}
       </script> 
           <br><br>
         <center>
