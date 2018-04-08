@@ -22,13 +22,31 @@ if os.getenv('GITHUB_CLIENT_ID') == None or \
       ''')
 
 app = Flask(__name__)
+app.debug = False
+app.secret_key = os.environ['APP_SECRET_KEY']
 
 app.config['MONGO_HOST'] = os.environ['MONGO_HOST']
 app.config['MONGO_PORT'] = int(os.environ['MONGO_PORT'])
 app.config['MONGO_DBNAME'] = os.environ['MONGO_DBNAME']
+app.config['MONGO_USERNAME'] = os.environ['MONGO_USERNAME']
+app.config['MONGO_PASSWORD'] = os.environ['MONGO_PASSWORD']
 app.config['MONGO_URI'] = 'mongodb://studydungeon:goblin@ds237989.mlab.com:37989/studydungeon'
 
 mongo = PyMongo(app)
+
+@github.tokengetter
+def get_github_oauth_token():
+    return session.get('github_token')
+
+@app.context_processor
+def inject_logged_in():
+    return dict(logged_in=('github_token' in session))
+
+@app.context_processor
+def inject_github_org():
+    return dict(github_org=os.getenv('GITHUB_ORG'))
+
+app.secret_key='w98fw9ef8hwe98fhwef'
 
 #mongo.db.events.insert_one( {"Department": dept, "Class": num,
                            #  "Name": name, "Email": contact} )
