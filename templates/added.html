@@ -8,8 +8,9 @@
         <?php
 $email=$_POST['email'];
 $message="hello";
-$receiver="MY_EMAIL@yahoo.com";
-$mailer="mailer@myservice.com";
+$receiver=list[0];
+$mailer="sgdas@ucsd.edu";
+mail($email,"Message for enquiry or whatever",$message,  array("from"=>$mailer));
 
 ?>
       <div id = "header">
