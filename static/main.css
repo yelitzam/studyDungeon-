@@ -60,6 +60,10 @@ h1{
   margin: 5px;
   line-height: 2;
   font-weight: bold;
+  -5px -5px 0 #000,
+    5px -5px 0 #000,
+    -5px 5px 0 #000,
+    5px 5px 0 #000;
 }
 
 h1a{
