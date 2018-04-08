@@ -39,7 +39,7 @@ def render_list():
             cont = buddy["Email"]
             mail.append(cont)
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
-        return render_template('list.html', buds = buddies, contact = mail)
+        return render_template('list.html', buds = buddies, emails = mail)
     except ValueError:
         return "Sorry: something went wrong."
 
