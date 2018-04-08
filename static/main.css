@@ -62,16 +62,16 @@ h1{
 }
 
 input{
-  font-size: 20px;
+  font-size: 15px;
   background-color:pink;
 }
 
 buttonfont{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 select{
-  font-size: 30px;
+  font-size: 20px;
   background-color:pink;
 }
 
