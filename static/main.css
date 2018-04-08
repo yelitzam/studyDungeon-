@@ -61,6 +61,18 @@ h1{
   font-weight: bold;
 }
 
+h1a{
+  text-align: center;
+  position: static;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  padding: 5px;
+  margin: 5px;
+  line-height: 2;
+  font-weight: bold;
+  color: black;
+}
+
 input{
   font-size: 15px;
   background-color:pink;
