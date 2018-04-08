@@ -14,7 +14,8 @@
       <script>
         
         window.onload = function() {
-          document.getElementById("buddies").innerHTML = {0};
+          var counts = {{ buds|tojson }};
+          document.getElementById("buddies").innerHTML = counts[0];
         }
       </script>    
     </body>
