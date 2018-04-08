@@ -11,10 +11,12 @@
     <br> <br>
         <p id="buddies"></p>
         <script>
+            oct = ""
         for (var bud in buds) 
 {
-    document.getElementById("buddies").innerHTML += bud;
+    oct.concat(bud);
 }
+document.getElementById("buddies").innerHTML=oct
         </script>
      
   </body>
