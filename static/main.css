@@ -2,7 +2,7 @@
   align-items: center;
   font-family: 'Raleway', sans-serif;
   color: pink;
-  
+
 
 }
 
@@ -47,7 +47,7 @@ outline{
   -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 
 h1{
@@ -127,4 +127,13 @@ article {
   border: 1px solid #ccc;
   border-radius: 6px;
   position: relative;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.team{
+  align-items: center;
+  text-align: center;
 }
