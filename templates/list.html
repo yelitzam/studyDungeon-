@@ -7,7 +7,9 @@
     <body>
       <!--<div id = "header"> --><center>
           <h2>Find a study buddy for </h2>  <!--</div> -->
-        <p id="class" name="class">class</p><p id="code" name="code">course</p><br></center>
+        <p id="class" name="class">class</p>
+        <p id="code" name="code">course</p><br>
+        </center>
           
       <br> <br>
         <center>
@@ -26,9 +28,11 @@
               names += contact[i];
               names += "<br>";
           }
+          var dep = {{ dept }};
+          var nu = {{ num }};
           document.getElementById("people").innerHTML = names;
-          document.getElementById("class").innerHTML = {{ dept }};
-          document.getElementById("code").innerHTML = {{ num }}; 
+          document.getElementById("class").innerHTML = dep;
+          document.getElementById("code").innerHTML = nu; 
         //}
       </script> 
           <br><br>
