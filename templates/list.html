@@ -17,10 +17,10 @@
           var contact = {{ emails|tojson }};
           names = " ";
           for (i=0; i<buddies.length; i++) {
-              names += "<b><div id = "header">Name: </div></b>";
+              names += "<div id = "header">Name: </div>";
               names += buddies[i];
               names += "  ||  "
-              names += "<b><div id = "header">Can be reached at: </div></b>";
+              names += "<div id = "header">Can be reached at: </div>";
               names += contact[i];
               names += "<br>";
           }
