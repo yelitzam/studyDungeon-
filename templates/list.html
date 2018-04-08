@@ -16,7 +16,7 @@
           var contact = {{ emails|tojson }};
           names = " ";
           for (i=0; i<buddies.length; i++) {
-              names += "<b>Name: </b>" + buddies[i] + " || " + '<a href="mailto:' + contact[i] + '">Email</a><br>';
+              names += "<b>Name: </b>" + buddies[i] + " || " + '<a href="mailto:' + contact[i] + '">Email this Student</a><br>';
               //names += contact[i];
               //names += "<br>";
           }
