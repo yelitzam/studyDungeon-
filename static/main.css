@@ -7,8 +7,9 @@
 }
 
 button{
-  width:120px;
+  width:150px;
   color: black;
+  bg-color:pink;
 }
 
 
@@ -69,7 +70,7 @@ buttonfont{
 }
 
 select{
-  font-size: 25px;
+  font-size: 30px;
 }
 
 h2{
