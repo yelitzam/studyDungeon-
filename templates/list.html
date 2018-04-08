@@ -25,8 +25,9 @@
               names += contact[i];
               names += "<br>";
           }
-          
+          if (names != " ") {
           document.getElementById("people").innerHTML = names;
+          }
           var dep = "okay" + {{ dept }};
       </script> 
           <br><br>
