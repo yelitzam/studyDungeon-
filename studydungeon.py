@@ -50,7 +50,7 @@ def render_added():
         toMail = []
         for person in mongo.db.events.find({ "Department": dept, "Class": num }):
             cont = person["Email"]
-            mail.append(cont)
+            toMail.append(cont)
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
         return render_template('added.html', list = toMail)
     except ValueError:
