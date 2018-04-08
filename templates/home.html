@@ -5,13 +5,14 @@
 {%  block content %}
 
       <body>
+
       <center>
       <div id = "header">
         <h2>Pick a class dumbass</h2>
       </div>
     <br> <br>
         <form action="/list" name="pin">
-    <select name="department">
+    <select id = "department">
       <option value = "ANTH"> ANTH </option>
       <option value = "AWP"> AWP </option>
       <option value = "BENG"> BENG </option>
@@ -34,14 +35,14 @@
       <option value = "VIS"> VIS </option>
     </select>
 
-    <input type="number" name="number" >
+    <input type = "text" id = "number" >
     <br/>
     <br/>
 
      Name
-    <input type="text" name="name" >
+    <input type = "text" id = "name" >
      Email
-        <input type="text" name="email" >
+        <input type = "text" id = "email" >
 
             <button onlick = "MyFunction()">Submit</button></form>
     <p id="demo">
@@ -53,7 +54,9 @@
                 document.getElementById("demo").innerHTML=x;
     }
     </script>
-
   </body>
-      <img src = "studyDungeon.png" alt = "background" >
+  <div id = "background">
+    <img src = "studyDungeon.png">
+  </div>
+</body>
 {%  endblock %}
