@@ -43,6 +43,8 @@ def render_list():
 @app.route('/added')
 def render_added():
     try:
+        dept = str(request.args['department'])
+        num = int(request.args['number'])
         name = str(request.args['name'])
         email = str(request.args['email'])
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
