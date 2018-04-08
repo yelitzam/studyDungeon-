@@ -54,3 +54,7 @@ app.secret_key='w98fw9ef8hwe98fhwef'
 @app.route('/')
 def home():
     return render_template('home.html')
+
+
+if __name__=="__main__":
+    app.run(debug=False, port=5000)
