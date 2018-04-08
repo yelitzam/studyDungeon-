@@ -15,8 +15,9 @@
         window.onload = function() {
           var buddies = {{ buds|tojson }};
           names = " ";
-          for bud in buddies {
-              names += bud += '\n';
+          for (i=0; i<buddies.length; i++) {
+              names += buddies[i] 
+              name += '\n';
           }
           document.getElementById("buddies").innerHTML = names;
         }
