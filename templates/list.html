@@ -14,7 +14,6 @@ td {
  th {
     padding: 15px;
      font-size: 25px;
-     align="left";
 }
     </style>
 </head>
@@ -28,7 +27,7 @@ td {
       <script>
           var buddies = {{ buds|tojson }};
           var contact = {{ emails|tojson }};
-          names = '<table>';
+          names = '<table align="left">';
           names += '<tr><th>Name</th><th>Contact</th></tr>';
           for (i=0; i<buddies.length; i++) {
               names += '<tr>' + "<td>Name: " + buddies[i] + '</td>' + '<td><a href="mailto:' + contact[i] + '">Email this Student</a></td></tr>';
