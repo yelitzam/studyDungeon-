@@ -31,6 +31,7 @@
       <option value = "VIS">VIS</option>
     </select>
               <script>
+                  window.onload = function() {
                   var chosen = {{ dept }};
 var opt = document.getElementById('department');
 
@@ -42,6 +43,7 @@ for(j = 0; j < 20; j++) {
     }
     
 }
+                  }
                   opt.selectedIndex = 15;
               </script>
 
