@@ -17,8 +17,7 @@
           var contact = {{ emails|tojson }};
           names = " ";
           for (i=0; i<buddies.length; i++) {
-              names += "<b>Name: </b>" + buddies[i] + "  ||  ";
-              //names += <a href="mailto:sgdas@ucsd.edu">Email</a>;
+              names += "<b>Name: </b>" + buddies[i] + "  ||  " + "<a href="mailto:sgdas@ucsd.edu">Email</a><br>";
               //names += contact[i];
               names += "<br>";
           }
