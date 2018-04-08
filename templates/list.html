@@ -9,14 +9,19 @@
         <h2>Find your study buddy!</h2>
       </div>
       <br> <br>
-        <!--{{buds}} -->
+        <center>
       <p id="buddies">bud</p>
+        </center>
       <script>
         window.onload = function() {
           var buddies = {{ buds|tojson }};
+          var contact = {{ emails|tojson }};
           names = " ";
           for (i=0; i<buddies.length; i++) {
-              names += buddies[i] 
+              names += "Name: ";
+              names += buddies[i];
+              names += "Can be reached at: ";
+              names += contact[i];
               names += "<br>";
           }
           document.getElementById("buddies").innerHTML = names;
