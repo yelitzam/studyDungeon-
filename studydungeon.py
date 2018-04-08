@@ -6,21 +6,6 @@ from flask import session
 from flask_pymongo import PyMongo
 from github import Github
 
-class GithubOAuthVarsNotDefined(Exception):
-    '''raise this if the necessary env variables are not defined '''
-
-if os.getenv('GITHUB_CLIENT_ID') == None or \
-        os.getenv('GITHUB_CLIENT_SECRET') == None or \
-        os.getenv('APP_SECRET_KEY') == None or \
-        os.getenv('GITHUB_ORG') == None:
-    raise GithubOAuthVarsNotDefined('''
-      Please define environment variables:
-         GITHUB_CLIENT_ID
-         GITHUB_CLIENT_SECRET
-         GITHUB_ORG
-         APP_SECRET_KEY
-      ''')
-
 app = Flask(__name__)
 app.debug = False
 app.secret_key = os.environ['APP_SECRET_KEY']
@@ -34,17 +19,6 @@ app.config['MONGO_URI'] = 'mongodb://studydungeon:goblin@ds237989.mlab.com:37989
 
 mongo = PyMongo(app)
 
-@github.tokengetter
-def get_github_oauth_token():
-    return session.get('github_token')
-
-@app.context_processor
-def inject_logged_in():
-    return dict(logged_in=('github_token' in session))
-
-@app.context_processor
-def inject_github_org():
-    return dict(github_org=os.getenv('GITHUB_ORG'))
 
 app.secret_key='w98fw9ef8hwe98fhwef'
 
