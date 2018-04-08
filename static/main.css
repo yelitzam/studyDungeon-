@@ -21,6 +21,7 @@ h1{
 
 #bg{
   background-repeat: repeat-x;
-  background-size: 20% 20%
+  background-size: 20% 20%;
+  background-position: right bottom;
 
 }
