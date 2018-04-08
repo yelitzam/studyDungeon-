@@ -14,10 +14,9 @@
       <script>
         window.onload = function() {
           var buddies = {{ buds|tojson }};
-          names = "";
+          names = " ";
           for bud in buddies {
-              names.concat(bud);
-              names.concat('\n');
+              names += bud += '\n';
           }
           document.getElementById("buddies").innerHTML = names;
         }
