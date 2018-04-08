@@ -18,7 +18,7 @@ app.config['MONGO_USERNAME'] = os.environ['MONGO_USERNAME']
 app.config['MONGO_PASSWORD'] = os.environ['MONGO_PASSWORD']
 #app.config['MONGO_URI'] = 'mongodb://studydungeon:goblin@ds237989.mlab.com:37989/studydungeon'
 
-#mongo = PyMongo(app)
+mongo = PyMongo(app)
 
 
 #app.secret_key='w98fw9ef8hwe98fhwef'
