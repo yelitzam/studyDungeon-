@@ -23,10 +23,9 @@ mongo = PyMongo(app)
 def home():
     dept = str(request.args['department'])
     num = str(request.args['number'])
-		name = str(request.args['name'])
-		email = int(request.args['email'])
-    mongo.db.events.insert_one( {"Department": dept, "Class": num,
-                             "Name": name, "Email": email} )
+    name = str(request.args['name'])
+    email = int(request.args['email'])
+    mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
     return render_template('home.html')
     
 
