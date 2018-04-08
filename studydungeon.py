@@ -32,11 +32,14 @@ def render_list():
         name = str(request.args['name'])
         email = str(request.args['email'])
         buddies = []
+        mail = []
         for buddy in mongo.db.events.find({ "Department": dept, "Class": num }):
-            contact = buddy["Name"]
-            buddies.append(contact)
+            person = buddy["Name"]
+            buddies.append(person)
+            cont = buddy["Email"]
+            mail.append(cont)
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
-        return render_template('list.html', buds = buddies)
+        return render_template('list.html', buds = buddies, contact = mail)
     except ValueError:
         return "Sorry: something went wrong."
 
