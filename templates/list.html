@@ -31,11 +31,11 @@
       <option value = "VIS">VIS</option>
     </select>
               <script>
-                  var option = {{ dept }};
+                  var chosen = {{ dept }};
 var opt = document.getElementById('department');
 
 for(var i, j = 0; i = opt.options[j]; j++) {
-    if(i.value == dept) {
+    if(i.value == chosen) {
         opt.selectedIndex = j;
         break;
     }
