@@ -1,0 +1,22 @@
+{%  extends "mainpage.html" %}
+
+{%  block title %}Home{%  endblock %}
+
+{%  block content %}
+    <h1>StudyDungeon</h1>
+    <body>
+      <div id = "header">
+        <h2>You have been added to this class!</h2>
+      </div>
+      <br> <br>
+        <center>
+      <p id="student">stu</p>
+        </center>
+      <script>
+        window.onload = function() {
+          info = "Added student."
+          document.getElementById("student").innerHTML = info;
+        }
+      </script>    
+    </body>
+{%  endblock %}
