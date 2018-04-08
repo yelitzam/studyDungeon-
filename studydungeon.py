@@ -34,7 +34,7 @@ def render_list():
         mongo.db.events.insert_one( {"Department": 1, "Class": 1, "Name": 1, "Email": 1} )
         return render_template('list.html')
     except ValueError:
-	return "Sorry: something went wrong."
+        return "Sorry: something went wrong."
 
 if __name__=="__main__":
     app.run(debug=False, port=5000)
