@@ -16,13 +16,9 @@ button{
   color: red;
 }
 
-#bg{
-  background-repeat: no-repeat;
-  background-size: 300px;
-  background-position: right bottom;
-
-}
-
-.background{
-  background: url(studyDungeon.png);
+img{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-repeat: repeat-x;
 }
