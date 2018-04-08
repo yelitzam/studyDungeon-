@@ -16,19 +16,17 @@ app.config['MONGO_PORT'] = int(os.environ['MONGO_PORT'])
 app.config['MONGO_DBNAME'] = os.environ['MONGO_DBNAME']
 app.config['MONGO_USERNAME'] = os.environ['MONGO_USERNAME']
 app.config['MONGO_PASSWORD'] = os.environ['MONGO_PASSWORD']
-#app.config['MONGO_URI'] = 'mongodb://studydungeon:goblin@ds237989.mlab.com:37989/studydungeon'
 
 mongo = PyMongo(app)
 
-
-#app.secret_key='w98fw9ef8hwe98fhwef'
-
-
-
 @app.route('/')
 def home():
+    dept = str(request.args['department'])
+    num = str(request.args['number'])
+		name = str(request.args['name'])
+		email = int(request.args['email'])
     mongo.db.events.insert_one( {"Department": dept, "Class": num,
-                             "Name": name, "Email": contact} )
+                             "Name": name, "Email": email} )
     return render_template('home.html')
     
 
