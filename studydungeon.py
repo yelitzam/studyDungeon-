@@ -32,7 +32,7 @@ def render_list():
         name = str(request.args['name'])
         email = str(request.args['email'])
         buddies = [];
-        for buddy in mongo.db.events.find(({ 'Department': dept, 'Class': num })):
+        for buddy in mongo.db.events.find(({ 'Department': dept, 'Class': num }, {_id:false, name:true})):
             buddies.append(buddy);
         mongo.db.events.insert_one( {"Department": dept, "Class": num, "Name": name, "Email": email} )
         return render_template('list.html', buds = buddies)
