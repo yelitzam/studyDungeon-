@@ -6,9 +6,7 @@
 <center><h1>StudyDungeon</h1></center><br><br>
     <body>
       <!--<div id = "header"> --><center>
-          <h2>Find a study buddy for {{ dept }} {{ num }}</h2>  <!--</div> -->
-        <p id="department" name="department">class</p>
-        <p id="coursenumber" name="coursenumber">course</p><br>
+        <h2>Find a study buddy for: <b> {{ dept }} {{ num }} </b></h2>  <!--</div> -->
         </center>
           
       <br> <br>
@@ -16,7 +14,6 @@
       <p id="people" name="people">No buddies for this class yet :(</p>
         </center>
       <script>
-       // window.onload = function() {
           var buddies = {{ buds|tojson }};
           var contact = {{ emails|tojson }};
           names = " ";
@@ -31,11 +28,6 @@
           
           document.getElementById("people").innerHTML = names;
           var dep = "okay" + {{ dept }};
-          //nu = " " + {{ num }};
-          
-          document.getElementById("department").innerHTML = dep;
-          document.getElementById("coursenumber").innerHTML = nu; 
-        //}
       </script> 
           <br><br>
         <center>
