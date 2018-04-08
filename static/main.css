@@ -16,6 +16,6 @@ button{
   color: red;
 }
 
-th, td {
+#th, #td {
     padding: 15px;
 }
