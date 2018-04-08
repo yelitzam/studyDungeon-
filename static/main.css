@@ -18,3 +18,7 @@ h1{
   text-align: center;
   color: red;
 }
+
+#bg{
+  background-repeat: repeat-x;
+}
