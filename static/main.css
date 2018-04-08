@@ -15,3 +15,7 @@ button{
   text-align: center;
   color: red;
 }
+
+th, td {
+    padding: 15px;
+}
